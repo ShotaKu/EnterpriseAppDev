@@ -60,14 +60,14 @@
     <div id="thumbarea">
       <ul id="thumbs">
           <!--ここから小さい画像リスト-->
-        <li value="1"><img src="images/thumbs/1.jpg" width="179" height="100" alt="" /></li>
-        <li value="2"><img src="images/thumbs/2.jpg" width="179" height="100" alt="" /></li>
-        <li value="3"><img src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
-        <li value="4"><img src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
-        <li value="5"><img src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
-        <li value="3"><img src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
-        <li value="4"><img src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
-        <li value="5"><img src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
+        <li value="1"><img id="showcase1" src="images/thumbs/1.jpg" width="179" height="100" alt="" /></li>
+        <li value="2"><img id="showcase2" src="images/thumbs/2.jpg" width="179" height="100" alt="" /></li>
+        <li value="3"><img id="showcase3" src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
+        <li value="4"><img id="showcase4" src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
+        <li value="5"><img id="showcase5" src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
+        <li value="3"><img id="showcase6" src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
+        <li value="4"><img id="showcase7" src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
+        <li value="5"><img id="showcase8" src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
       </ul>
     </div>
   </div>
@@ -266,38 +266,29 @@ dataRef.once("value")
                     var key = childSnapshot.key;
                     var val = childSnapshot.val();
                     console.log("Ｌ"+childSnapshot.key + ":" + val);
-                    if(key == "name")
-                    {
+                    if(key == "name"){
                         document.getElementById("dormName"+(i+1)).innerHTML = val;
                     }
-                    else if(key == "thumbnail")
-                    {
+                    else if(key == "thumbnail"){
                         document.getElementById("dormImage"+(i+1)).src = val;
                     }
-                    else if(key == "detail")
-                    {
+                    else if(key == "detail"){
                         document.getElementById("dormDetail"+(i+1)).innerHTML = val;
                     }
-                    else if(key == "rooms")
-                    {
+                    else if(key == "rooms"){
                         console.log("Ｌrooms");
                         var avgPrice = 0;
                         var available = 0;
-                        childSnapshot.forEach(function(childSnapshot)
-                        {
+                        childSnapshot.forEach(function(childSnapshot){
                             console.log("  ＬRoom Number:"+childSnapshot.key);
-                            childSnapshot.forEach(function(childSnapshot)
-                            {
+                            childSnapshot.forEach(function(childSnapshot){
                                 var key = childSnapshot.key;
                                 var val = childSnapshot.val();
-                                if(key == "price")
-                                {
+                                if(key == "price"){
                                     avgPrice += val;
                                 }
-                                else if(key == "isAvailable")
-                                {
-                                    if(val == "true")
-                                    {
+                                else if(key == "isAvailable"){
+                                    if(val == "true"){
                                         available++;
                                     }
                                 }
