@@ -1,0 +1,22 @@
+<div id="templatemo_content_panel_1">
+    <div id="templatemo_room_gallary_section">
+            <h1>Room photos</h1>
+        <div class="templatemo_news_box">
+            <h3>Space for room photos</h3>
+        </div>      
+    </div><!-- end of news section -->    
+    <div class="cleaner_with_height">
+        &nbsp;
+    </div>
+    <div id="templatemo_section_1_1"></div>
+            <div id="templatemo_room_detail_section">
+                    <h1>Room photos</h1>
+                <div class="templatemo_news_box">
+                    <h3>Space for room photos</h3>
+                </div>      
+            </div><!-- end of news section -->    
+            <div class="cleaner_with_height">
+                &nbsp;
+            </div>
+        </div>
+</div>
