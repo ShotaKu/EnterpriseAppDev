@@ -60,14 +60,14 @@
     <div id="thumbarea">
       <ul id="thumbs">
           <!--ここから小さい画像リスト-->
-        <li value="1"><img id="showcase1" src="images/thumbs/1.jpg" width="179" height="100" alt="" /></li>
-        <li value="2"><img id="showcase2" src="images/thumbs/2.jpg" width="179" height="100" alt="" /></li>
-        <li value="3"><img id="showcase3" src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
-        <li value="4"><img id="showcase4" src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
-        <li value="5"><img id="showcase5" src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
-        <li value="3"><img id="showcase6" src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
-        <li value="4"><img id="showcase7" src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
-        <li value="5"><img id="showcase8" src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
+        <li value="1"><img id="showcase1" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="2"><img id="showcase2" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="3"><img id="showcase3" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="4"><img id="showcase4" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="5"><img id="showcase5" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="3"><img id="showcase6" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="4"><img id="showcase7" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="5"><img id="showcase8" src="images/loading.gif" width="179" height="100" alt="" /></li>
       </ul>
     </div>
   </div>
@@ -174,14 +174,14 @@ var autodelay = 5;
 	<div class="templatemo_section_2">
     
     	
-        <img id="dormImage1" src="images/templatemo_image_01.jpg" alt="image" width="200" height="150"/>
+        <img id="dormImage1" src="images/loading.gif" alt="image" width="200" height="150"/>
         <h4 id = "dormName1">null</h4>
         <p id = "dormDetail1">null</p>
         <div class="price">PRICE:<span id="dormPrice1"> $1,234,000</span></div>    
         <div class="readmore"><a href="subpage.html">Read more</a></div>                       
     </div>
     <div class="templatemo_section_2">
-        <img id="dormImage2" src="images/templatemo_image_02.jpg" alt="image" width="200"height="150"/>
+        <img id="dormImage2" src="images/loading.gif" alt="image" width="200" height="150"/>
         <h4 id= "dormName2">null</h4>
         <p id = "dormDetail2">null</p>
         <div class="price">PRICE:<span> $876,000</span></div>                           
@@ -189,7 +189,7 @@ var autodelay = 5;
     </div>
     <div class="templatemo_section_2">
 
-        <img id="dormImage3" src="images/templatemo_image_03.jpg" alt="image" width="200"/>
+        <img id="dormImage3" src="images/loading.gif" alt="image" width="200" height="150"/>
         <h4 id= "dormName3">null</h4>
         <p id = "dormDetail3">null</p>
         <div class="price">PRICE:<span> $2,468,000</span></div>                           
@@ -256,12 +256,30 @@ var autodelay = 5;
 var database = firebase.database();
 // alert(firebase.app().name);
 var dataRef = database.ref('Dormitory');
+var showCaseRef = database.ref('Showcase');
+showCaseRef.once("value").then(function(snapshot)
+{
+    var im = 1;
+    console.log("Start load images:"+ snapshot.key);
+    snapshot.forEach(function(childSnapshot) {
+        if(im<=7)
+        {
+            var imageURL = childSnapshot.val();
+            console.log((im-1)+":"+imageURL);
+            document.getElementById("showcase"+im).src = imageURL;
+        }
+        im++;
+    });
+})
 dataRef.once("value")
     .then(function(snapshot){
         var i = 0;
-        //var dorms = [];
+        var dormID = 0;
         snapshot.forEach(function(childSnapshot) {
-            console.log(childSnapshot.key);    
+            dormID = childSnapshot.key;
+            if(i<3)
+            {
+                console.log("Dorm "+dormID);   
                 childSnapshot.forEach(function(childSnapshot){
                     var key = childSnapshot.key;
                     var val = childSnapshot.val();
@@ -295,10 +313,13 @@ dataRef.once("value")
                                 console.log("   Ｌ"+key + ":" + val);
                             });
                         });
-                        document.getElementById("dormPrice"+(i+1)).innerHTML = " "+avgPrice+"Baht";
+                        if(avgPrice != 0){
+                            document.getElementById("dormPrice"+(i+1)).innerHTML = " "+avgPrice+"Baht";
+                        }
                     }
             });
             i++;
+            }
         });
     })
 </script>
