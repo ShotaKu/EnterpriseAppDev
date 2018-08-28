@@ -8,7 +8,17 @@
 #thumbarea ul{ margin:0; padding: 0px;}
 #thumbs {position:absolute; list-style:none; height:100px; width:10000px;}
 #thumbs li {float:left; margin-right:5px; cursor:pointer}
-.imgnav {position:absolute; height:250px; width:20%; z-index:100; height:250px	; width:20%; z-index:100; outline:none; cursor:pointer}
+.imgnav {
+    position:absolute; 
+    height:250px; 
+    width:20%; 
+    z-index:100; 
+    height:250px; 
+    width:20%; 
+    z-index:100; 
+    outline:none; 
+    cursor:pointer
+}
 .imgnavRoom {
     position:absolute; 
     height:100%; 

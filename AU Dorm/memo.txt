@@ -1,22 +1,22 @@
-<div id="templatemo_content_panel_1">
-    <div id="templatemo_room_gallary_section">
-            <h1>Room photos</h1>
-        <div class="templatemo_news_box">
-            <h3>Space for room photos</h3>
-        </div>      
-    </div><!-- end of news section -->    
-    <div class="cleaner_with_height">
-        &nbsp;
+<div id="imagearea">
+    <div id="image">
+        <!--ここから小さい画像リストを大きく表示するところ-->
+      <a href="javascript:slideShow.nav(-1)" class="imgnav " id="previmg"></a>
+      <a href="javascript:slideShow.nav(1)" class="imgnav " id="nextimg"></a>
     </div>
-    <div id="templatemo_section_1_1"></div>
-            <div id="templatemo_room_detail_section">
-                    <h1>Room photos</h1>
-                <div class="templatemo_news_box">
-                    <h3>Space for room photos</h3>
-                </div>      
-            </div><!-- end of news section -->    
-            <div class="cleaner_with_height">
-                &nbsp;
-            </div>
-        </div>
-</div>
+  </div>
+  <div id="thumbwrapper">
+    <div id="thumbarea">
+      <ul id="thumbs">
+          <!--ここから小さい画像リスト-->
+        <li value="1"><img id="showcase1" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="2"><img id="showcase2" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="3"><img id="showcase3" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="4"><img id="showcase4" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="5"><img id="showcase5" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="3"><img id="showcase6" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="4"><img id="showcase7" src="images/loading.gif" width="179" height="100" alt="" /></li>
+        <li value="5"><img id="showcase8" src="images/loading.gif" width="179" height="100" alt="" /></li>
+      </ul>
+    </div>
+  </div>

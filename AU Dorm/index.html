@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-    <script type="text/javascript" src="myScript.js"></script>
+    <script type="text/javascript" src="login.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Real Estate - Free CSS Template</title>
-    <meta name="keywords" content="free css templates, real estate website, website templates, W3C, CSS, XHTML" />
-    <meta name="description" content="Real Estate Template - Free CSS Template, W3C compliant XHTML CSS layout" />
+    <title>AU Dorm</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
     <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="slideShow.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="gallery_style.css" />
 </head>
 <body>
@@ -28,7 +29,7 @@
                 <!-- ここメニュー -->
                 <ul>
                     <li><a href="index.html" class="current">Home</a></li>
-                    <li><a href="subpage.html">Dorm List</a></li>
+                    <li><a href="dorms.html">Dorm List</a></li>
                     <li><a href="#">Student</a></li>
                     <li><a href="#">Owners</a></li>
                     <li><a href="#">About</a></li>
@@ -38,10 +39,10 @@
         </div>
         <!--ここログインセッション-->
         <div id="templatemo_login_section">
-        	<form method="get" action="#">
-                <label>Owner ID:</label><input type="text" name="email" class="input_field" />
-                <label>Password:</label><input type="password" name="password" class="input_field" />
-                <input type="submit" value="Login" name="submit" class="submit_btn" />
+        	<form id="login_controller" method="get" action="#">
+                <label>Owner ID:</label><input type="text" id="ownerID" name="email" class="input_field" />
+                <label>Password:</label><input type="password" id="password" name="password" class="input_field" />
+                <input type="submit" value="Login" name="submit" class="submit_btn" onclick="loginByOwner()" />
             </form>
         </div>
     </div> <!-- end of menu login section -->
@@ -49,42 +50,45 @@
 
 <div id="templatemo_gallery_panel">
 <div id="gallery">
-  <div id="imagearea">
-    <div id="image">
-        <!--ここから小さい画像リストを大きく表示するところ-->
-      <a href="javascript:slideShow.nav(-1)" class="imgnav " id="previmg"></a>
-      <a href="javascript:slideShow.nav(1)" class="imgnav " id="nextimg"></a>
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img id="showcase1" src="images/showcaseLoading.gif" style="width:100%" height="250px">
+      <div id="showcaseName1" class="text">Caption Text</div>
     </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img id="showcase2" src="images/showcaseLoading.gif" style="width:100%"height="250px">
+      <div id="showcaseName2" class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img  id="showcase3" src="images/showcaseLoading.gif" style="width:100%"height="250px">
+      <div id="showcaseName3" class="text">Caption Three</div>
+    </div>    
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-  <div id="thumbwrapper">
-    <div id="thumbarea">
-      <ul id="thumbs">
-          <!--ここから小さい画像リスト-->
-        <li value="1"><img id="showcase1" src="images/loading.gif" width="179" height="100" alt="" /></li>
-        <li value="2"><img id="showcase2" src="images/loading.gif" width="179" height="100" alt="" /></li>
-        <li value="3"><img id="showcase3" src="images/loading.gif" width="179" height="100" alt="" /></li>
-        <li value="4"><img id="showcase4" src="images/loading.gif" width="179" height="100" alt="" /></li>
-        <li value="5"><img id="showcase5" src="images/loading.gif" width="179" height="100" alt="" /></li>
-        <li value="3"><img id="showcase6" src="images/loading.gif" width="179" height="100" alt="" /></li>
-        <li value="4"><img id="showcase7" src="images/loading.gif" width="179" height="100" alt="" /></li>
-        <li value="5"><img id="showcase8" src="images/loading.gif" width="179" height="100" alt="" /></li>
-      </ul>
-    </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
   </div>
 </div>
-
-<script type="text/javascript">
-var imgid = 'image';
-var imgdir = 'images/fullsize';
-var imgext = '.jpg';
-var thumbid = 'thumbs';
-var auto = true;
-var autodelay = 5;
-</script>
 <script type="text/javascript" src="slide.js"></script>
+<!-- <script type="text/javascript" src="slide.js"></script> -->
 
 </div>
-
+<!-- ここからAbout と 検索-->
 <div id="templatemo_content_panel_1">
 
 	<div id="templatemo_news_section">
@@ -101,14 +105,14 @@ var autodelay = 5;
         	<div class="left_column">
                 <!-- <div class="form_row"> <label>Dormitory name: </label><input type="text" name="country" value="" /> </div> -->
                 <div class="form_row"> <label>Dormitory name: </label>
-                	<select name="state">
+                	<select name="dormitory">
                         <option>Unspecified</option>
                         <option>Assumption University</option>
                         </select>
                 </div>
                 <div class="form_row">
                         <label>Price: </label>
-                        <select name="min_price">
+                        <select name="min-price">
                             <option>minimum</option>
                             <option>฿2000/Mon</option>
                             <option>฿2500/Mon</option>
@@ -169,23 +173,22 @@ var autodelay = 5;
     </div><!-- end of section 1 -->
     <div class="cleaner_with_height">&nbsp;</div>
 </div>
-
+<!-- ここから寮ショーケース -->
 <div id="templatemo_content_panel_2">
 	<div class="templatemo_section_2">
-    
-    	
+        
         <img id="dormImage1" src="images/loading.gif" alt="image" width="200" height="150"/>
         <h4 id = "dormName1">null</h4>
         <p id = "dormDetail1">null</p>
         <div class="price">PRICE:<span id="dormPrice1"> $1,234,000</span></div>    
-        <div class="readmore"><a href="subpage.html">Read more</a></div>                       
+        <div id="dormLink1" class="readmore"><a href="index.html">Read more</a></div>                       
     </div>
     <div class="templatemo_section_2">
         <img id="dormImage2" src="images/loading.gif" alt="image" width="200" height="150"/>
         <h4 id= "dormName2">null</h4>
         <p id = "dormDetail2">null</p>
         <div class="price">PRICE:<span> $876,000</span></div>                           
-        <div class="readmore"><a href="subpage.html">Read more</a></div>
+        <div  id="dormLink2" class="readmore"><a href="index.html">Read more</a></div>
     </div>
     <div class="templatemo_section_2">
 
@@ -193,7 +196,7 @@ var autodelay = 5;
         <h4 id= "dormName3">null</h4>
         <p id = "dormDetail3">null</p>
         <div class="price">PRICE:<span> $2,468,000</span></div>                           
-      <div class="readmore"><a href="subpage.html">Read more</a></div>
+      <div id="dormLink3"  class="readmore"><a href="index.html">Read more</a></div>
     </div>
     
     <div class="cleaner_with_height">&nbsp;</div>
@@ -204,20 +207,17 @@ var autodelay = 5;
 	<div class="templatemo_quick_contact">
     	<h1>Quick Contact</h1>
         <p>
-            Tel: 010-100-1000<br />
-            Fax: 020-200-2000<br />
-            Email: info {at} templatemo.com
+            Tel: 02-723-2222<br />
+            Location: Student Leadership & Experiential Learning Center @King David (CSLEL)<br />
+            Email:  auso2015@hotmail.com
         </p>
-        <a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" width="88" height="31" vspace="8" border="0" /></a>
-<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"  src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" vspace="8" border="0" /></a> 
     </div><!-- end of news section 3-->
     
    <div class="templatemo_section_3">
     	<h1>Helpful Links</h1>
         	<ul class="list_section">
-                <li><a href="#">Testimonials</a></li>
                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">Terms of us</a></li>
+                <li><a href="#">Terms of use</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
@@ -225,10 +225,9 @@ var autodelay = 5;
     <div class="templatemo_section_3">
     	<h1>Partner Links</h1>
         	<ul class="list_section">
-                <li><a href="http://www.flashmo.com" target="_blank">Free Flash</a></li>
-                <li><a href="http://www.templatemo.com" target="_blank">Free CSS</a></li>
-                <li><a href="http://www.webdesignmo.com" target="_blank">Web Design</a></li>
-                <li><a href="http://www.photovaco.com" target="_blank">Free Photos</a></li>
+                <li><a href="http://www.au.edu" target="_blank">Assumption University</a></li>
+                <li><a href="http://auso.au.edu/" target="_blank">AUSO</a></li>
+                <li><a href="http://www.scitech.au.edu/" target="_blank">Science and Technology</a></li>
             </ul>
     </div>
     
@@ -240,7 +239,6 @@ var autodelay = 5;
 </div> <!-- 一番最後 -->
 <!-- <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>-->
 </body> 
-
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -262,11 +260,20 @@ showCaseRef.once("value").then(function(snapshot)
     var im = 1;
     console.log("Start load images:"+ snapshot.key);
     snapshot.forEach(function(childSnapshot) {
-        if(im<=7)
+        if(im<=3)
         {
-            var imageURL = childSnapshot.val();
+            var imageURL = childSnapshot.child("image").val();
+            var name = childSnapshot.child("name").val();
             console.log((im-1)+":"+imageURL);
-            document.getElementById("showcase"+im).src = imageURL;
+            if(imageURL != null){
+               document.getElementById("showcase"+im).src = imageURL;
+            }
+            if(name != null){
+                document.getElementById("showcaseName"+im).innerHTML = name;
+            }
+            else{
+                console.error("No name for caption id:"+im);
+            }
         }
         im++;
     });
@@ -279,48 +286,45 @@ dataRef.once("value")
             dormID = childSnapshot.key;
             if(i<3)
             {
-                console.log("Dorm "+dormID);   
-                childSnapshot.forEach(function(childSnapshot){
-                    var key = childSnapshot.key;
-                    var val = childSnapshot.val();
-                    console.log("Ｌ"+childSnapshot.key + ":" + val);
-                    if(key == "name"){
-                        document.getElementById("dormName"+(i+1)).innerHTML = val;
-                    }
-                    else if(key == "thumbnail"){
-                        document.getElementById("dormImage"+(i+1)).src = val;
-                    }
-                    else if(key == "detail"){
-                        document.getElementById("dormDetail"+(i+1)).innerHTML = val;
-                    }
-                    else if(key == "rooms"){
-                        console.log("Ｌrooms");
-                        var avgPrice = 0;
-                        var available = 0;
-                        childSnapshot.forEach(function(childSnapshot){
-                            console.log("  ＬRoom Number:"+childSnapshot.key);
-                            childSnapshot.forEach(function(childSnapshot){
-                                var key = childSnapshot.key;
-                                var val = childSnapshot.val();
-                                if(key == "price"){
-                                    avgPrice += val;
-                                }
-                                else if(key == "isAvailable"){
-                                    if(val == "true"){
-                                        available++;
-                                    }
-                                }
-                                console.log("   Ｌ"+key + ":" + val);
-                            });
-                        });
-                        if(avgPrice != 0){
-                            document.getElementById("dormPrice"+(i+1)).innerHTML = " "+avgPrice+"Baht";
-                        }
-                    }
-            });
+                //console.log("Dorm "+dormID);
+                var dormName = childSnapshot.child("name").val();
+                var imgURL = childSnapshot.child("thumbnail").val();
+                var detail = childSnapshot.child("detail").val();
+                document.getElementById("dormName"+(i+1)).innerHTML = dormName;
+                document.getElementById("dormImage"+(i+1)).src = imgURL;
+                document.getElementById("dormDetail"+(i+1)).innerHTML = detail;
+                
+                var rooms = childSnapshot.child("rooms");
+                var avgPrise = 0;
+                var roomNum = 0;
+                rooms.forEach(function(childSnapshot)
+                {
+                    //console.log("room: "+childSnapshot.key);
+                    var prise = childSnapshot.child("prise").val();
+                    avgPrise += prise;
+                    roomNum++;
+                });
+                if(0 < roomNum)
+                {
+                    avgPrise/=roomNum;
+                    document.getElementById("dormPrice"+(i+1)).innerHTML = " "+avgPrise+"Baht";
+                }
+                else
+                {
+                    console.log(dormName + " do not have any room.(Average prise error)")
+                }
             i++;
             }
         });
     })
+    function loginByOwner(){
+        var isLogin = login(dataRef);
+        // if(isLogin){
+        //     var loginElement = document.getElementById("templatemo_login_section");
+        //     while (loginElement.firstChild) {
+        //         loginElement.removeChild(loginElement.firstChild);
+        //     }
+        // }
+    }
 </script>
 </html>
