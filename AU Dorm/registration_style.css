@@ -1,0 +1,120 @@
+.registration_type a{
+	clear: both;
+	display: block;
+	margin-top: 20px;
+	width: 100px;
+	padding: 1px 0;
+	margin: 15px 15px 10px 0;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	color: #e50000;
+	background: rgba(255, 255, 255, 0.20);
+	border: 1px solid #e50000;
+	border-radius: 8px;
+}
+
+button.registration_type{
+	clear: both;
+	display: block;
+	margin-top: 20px;
+	width: 100px;
+	padding: 1px 0;
+	margin: 15px 15px 10px 0;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	color: #e50000;
+	background: rgba(255, 255, 255, 0.20);
+	border: 1px solid #e50000;
+	border-radius: 8px;
+}
+
+button.room_edit{
+	clear: both;
+	display: block;
+	margin-top: 20px;
+	width: 100%;
+	padding: 1px 0;
+	margin: 15px 15px 10px 0;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	color: #e50000;
+	background: rgba(255, 255, 255, 0.20);
+	border: 1px solid #e50000;
+	border-radius: 8px;
+}
+
+.registration_type_section{
+	float: center;
+	width: 100%;
+	height: auto;
+     padding: 15px 15px 15px 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: 25px;
+    border: 1px solid #e8e8e8;
+    background: #ffffff;
+    box-shadow: 0 1px 2px 0 #BFBFBF;
+    border-radius: 3px;
+}
+
+#registration_form_section{
+	float: center;
+	/* width: 100%; */
+	height: auto;
+     padding: 15px 15px 15px 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: 25px;
+    border: 1px solid #e8e8e8;
+    background: #ffffff;
+    box-shadow: 0 1px 2px 0 #BFBFBF;
+    border-radius: 3px;
+}
+input.registration_input{
+    padding: 0 0 0 4px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e8e8e8;
+    background: #ffffff;
+    box-shadow: 0 1px 2px 0 #BFBFBF;
+    border-radius: 3px;
+}
+input.room_number_input{
+    padding: 0 0 0 4px;
+    width: 50%;
+    height: 100%;
+    border: 1px solid #e8e8e8;
+    background: #ffffff;
+    box-shadow: 0 1px 2px 0 #BFBFBF;
+    border-radius: 3px;
+}
+ul.menu{
+    padding:0;
+    list-style-type:none;
+    overflow:hidden;
+}
+ul.menu li{
+    width:25%;
+    padding: 0 0 10px 20px;
+}
+ul.menu li:nth-child(even){
+    float:left;
+}
+ul.menu li:nth-child(odd){
+    float:left;
+    clear:left;
+}
+textarea{
+    font-family: BariolRegular;
+    height: 150px;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    background: #ffffff;
+    box-shadow: 0 1px 2px 0 #BFBFBF;
+    border-radius: 3px;
+}

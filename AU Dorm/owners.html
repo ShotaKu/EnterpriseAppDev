@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AU Dorm</title>
+    <link rel="icon" href="images/icon.JPG">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="registration_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="gallery_style.css" />
+</head>
+<body>
+    <!--ここからヘッダー-->
+<div id="templatemo_container">
+<div id="templatemo_top_panel">
+	<div id="templatemo_header_section">
+        <!--ここタイトル-->
+		<div id="templatemo_header">
+        	AU DORM
+        </div>
+    </div> <!-- end of header section -->
+    
+    <div id="templatemo_menu_login_section">
+    	<div id="templatemo_menu_section">
+        	<div id="templatemo_menu_panel">
+                <!-- ここメニュー -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dorms.html">Dorm List</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="owners.html" class="current">Owners</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>                   
+                </ul> 
+            </div> <!-- end of menu -->
+        </div>
+        <!--ここログインセッション-->
+        <div id="templatemo_login_section">
+        	<form id="login_controller" method="get" action="#">
+                <!-- <script>checkLoginStatus();</script> -->
+                <!--表示されません-->
+            </form>
+        </div>
+    </div> <!-- end of menu login section -->
+</div> <!-- end of top panel -->
+
+<div id="templatemo_content_panel_1">
+    <div class="registration_type_section">
+        <h1>Registrate new owner and dormitory information.</h1>
+        <p>Create new dormitory and owner information</p>
+        <div id="createNewOwner" class="registration_type">
+            <a href="index.html">New owner</a>
+        </div>
+    </div>
+    <div class="registration_type_section">
+        <h1>Registrate staff</h1>
+        <p>Registrate new staff account which can edit available room status and dormitory information insted of dormitory owners.</p>
+        <div id="createNewStaff" class="registration_type">
+            <a href="index.html">New staff</a>
+        </div>
+    </div>
+    <div class="registration_type_section">
+        <h1>Registrate new owner and dormitory information.</h1>
+        <p>Edit dormitory information (Login by owner is requied) </p>
+        <div id="editDormitory" class="registration_type">
+            <a href="index.html">Edit dormitory</a>
+        </div>
+    </div>
+    <div class="registration_type_section">
+        <h1>Registrate new room / edit available status.</h1>
+        <p>Edit dormitory information (Owner ID is requied) </p>
+        <div id="editRoom" class="registration_type">
+            <a href="index.html">Edit room</a>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="templatemo_footer_panel">
+    Copyright © 2048 <a href="index.html">Your Company Name</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_blank">Free CSS Templates</a></div>
+</div> <!-- 一番最後 -->
+<!-- <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>-->
+</body> 
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+    checkLoginStatus();
+    var config = {
+        apiKey: "AIzaSyBO3AHVZG4mF5WvJvVfX-RcWrNceWku5u4",
+        authDomain: "audorm-c6dae.firebaseapp.com",
+        databaseURL: "https://audorm-c6dae.firebaseio.com",
+        projectId: "audorm-c6dae",
+        storageBucket: "audorm-c6dae.appspot.com",
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    var dataRef = database.ref('Dormitory');
+    function loginByOwner(){
+        var isLogin = login(dataRef);
+    }
+</script>
+</html>

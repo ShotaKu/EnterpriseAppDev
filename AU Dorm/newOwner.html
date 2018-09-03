@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script type="text/javascript" src="myScript.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AU Dorm</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/icon.JPG">
+    <link href="registration_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="gallery_style.css" />
+    <script src="login.js"></script>
+</head>
+<body>
+<div id="templatemo_container">
+     <!--ここからヘッダー-->
+<div id="templatemo_top_panel">
+	<div id="templatemo_header_section">
+        <!--ここタイトル-->
+		<div id="templatemo_header">
+        	AU DORM
+        </div>
+    </div> <!-- end of header section -->
+    
+    <div id="templatemo_menu_login_section">
+    	<div id="templatemo_menu_section">
+        	<div id="templatemo_menu_panel">
+                <!-- ここメニュー -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dorms.html" class="current">Dorm List</a></li>
+                    <li><a href="#">Student</a></li>
+                    <li><a href="#">Owners</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>                   
+                </ul> 
+            </div> <!-- end of menu -->
+        </div>
+        <!--ここログインセッション-->
+        <div id="templatemo_login_section">
+        	<form id="login_controller" method="get" action="#">
+                <!--ここにログインメニューが表示される-->
+            </form>
+        </div>
+    </div> <!-- end of menu login section -->
+</div> <!-- ヘッダー終わり -->
+
+<div id="templatemo_content_panel_1">
+    <div id="registration_form_section">
+        <h1>Create new owner</h1>
+        <p>Please fill all informations</p>
+
+        <h2>Owner Informations</h2>
+        <ul class="menu">
+                <li><label>Name*:</label></li>
+                    <li><input class="registration_input" id="oName" placeholder="Dormitory name"></li>
+                <li><label>User Name*:</label></li>
+                    <li><input class="registration_input" id="oUserName" placeholder="Dormitory name"></li>
+                <li><label>Mobile Phone Number*:</label></li>
+                    <li><input class="registration_input" id="oPhone" placeholder="e.g. 095999999"></li>
+                <li><label>E-mail Address*:</label></li>
+                    <li><input class="registration_input" id="oEmail" placeholder="example@example.com"></li>
+                <li><label>Address*:</label></li>
+                    <li><input class="registration_input" id="oAddress" placeholder="Address"></li>
+                <li><label>Password*:</label></li>
+                    <li><input class="registration_input" id="oPassword" placeholder="More than 6 characters"></li>
+                <li><label>Password*:</label></li>
+                    <li><input class="registration_input" id="oPassword" placeholder="More than 6 characters"></li>
+        </ul>
+
+        <h2>Dormitory Informations</h2>
+        <p>Please input your dormitory information (This information can edit after registration).</p>
+        <ul class="menu">
+            <li><label>Dormitory Name*:</label></li>
+                <li><input class="registration_input" id="dName" placeholder="Dormitory name"></li>
+            <li><label>Dormitory Phone Number*:</label></li>
+                <li><input class="registration_input" id="dPhone" placeholder="e.g. 095999999"></li>
+            <li><label>Location*:</label></li>
+                <li><input class="registration_input" id="dLocate" placeholder="Address"></li>
+            <li><label>Discription*:</label></li>
+                <li><textarea class="registration_input" id="dDetail" placeholder="e.g. Can walk to university in 5 min."></textarea></li>
+            <li><label>Thumbnail*:</label></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="dThumbnail" placeholder="Address"></li>
+        </ul>
+
+        <h2>Create first room</h2>
+        <ul class="menu" id="RoomEdit">
+            <li><label>Appeal Point:</label></li>
+                <li><textarea class="registration_input" id="rPoint" placeholder="e.g. Romm have good view and beautiful lighting"></textarea></li>
+            <li><label>Thumbnail:</label></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rThumbnail" placeholder="Address"></li>
+            <li><label>Room layout:</label></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rlayout" placeholder="Address"></li>
+            <li><label>Appeal Image 1:</label></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rImage1" placeholder="Address"></li>
+            <li><label>Appeal Image 2:</label></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rImage2" placeholder="Address"></li>
+            <li><label>Room Number 1*:</label></li>
+                <li>
+                    <input class="room_number_input" id="rNumber1" placeholder="Room number">
+                    <input type="checkbox" id="rAvailable1"><label>Is available</label>
+                </li>
+            <li><label>Add more room/Remove</label></li>
+                <li>
+                    <ul class="menu">
+                            <li><button class="room_edit" onclick="addMore()">Add</button></li>
+                            <li><button class="room_edit" onclick="remove()">Remove</button></li>
+                    </ul>
+                </li>    
+                
+        </ul>
+        <ul class="menu">
+            <li></li>
+                <li><button class="registration_type" onclick="registration()">Send</button></li>
+        </ul>
+        <!-- <form></form> -->
+    </div>
+</div>
+
+
+<div id="templatemo_footer_panel">
+    Copyright © 2048 <a href="index.html">Your Company Name</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_blank">Free CSS Templates</a></div>
+</div> <!-- 一番最後 -->
+<!-- <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>-->
+</body> 
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+    checkLoginStatus();
+    var config = {
+        apiKey: "AIzaSyBO3AHVZG4mF5WvJvVfX-RcWrNceWku5u4",
+        authDomain: "audorm-c6dae.firebaseapp.com",
+        databaseURL: "https://audorm-c6dae.firebaseio.com",
+        projectId: "audorm-c6dae",
+        storageBucket: "audorm-c6dae.appspot.com",
+        //messagingSenderId: "715848706924"
+    };
+    firebase.initializeApp(config);
+        
+        function loginByOwner(){
+            var isLogin = login(ref);
+        }
+    function registration(){
+        console.log("Sended");
+    }
+    var i = 1;
+    function addMore(){
+        //<li><label>Room Number 1*:</label></li>
+        var newRoom = document.createElement("LI");
+        var label = document.createElement("label");
+        label.innerHTML = "Room number "+(i+1)+":";
+        newRoom.appendChild(label);
+        // <li>
+        //  <input class="room_number_input" id="rNumber1" placeholder="Room number">
+        //  <input type="checkbox" id="rAvailable1"><label>Is available</label>
+        //</li>
+        var newRoomNumber = document.createElement("li");
+        var input = document.createElement("input");
+        input.id = "rNumber"+(i+1);
+        input.className="room_number_input";
+        input.placeholder = "Room Number";
+        newRoomNumber.appendChild(input);
+
+        var isAvailable = document.createElement("input");
+        isAvailable.type = "checkbox";
+        isAvailable.id = "rAvailable"+(i+1);
+        newRoomNumber.appendChild(isAvailable);
+        var isAvailableLabel = document.createElement("label");
+        isAvailableLabel.innerHTML = "Is available";
+        newRoomNumber.appendChild(isAvailableLabel);
+
+        var list = document.getElementById("RoomEdit");
+        console.log(list.id+":"+($('#RoomEdit').length));
+        list.insertBefore(newRoom, list.children[list.children.length-2]);   
+        list.insertBefore(newRoomNumber, list.children[list.children.length-2]);     
+        i++;
+    }
+</script>
+</html>

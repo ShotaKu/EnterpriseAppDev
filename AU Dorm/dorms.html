@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script type="text/javascript" src="myScript.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="images/icon.JPG">
+    <title>AU Dorm</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="slideShow.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="gallery_style.css" />
+    <script src="login.js"></script>
+</head>
+<body>
+    <!--ここからヘッダー-->
+<div id="templatemo_container">
+<div id="templatemo_top_panel">
+	<div id="templatemo_header_section">
+        <!--ここタイトル-->
+		<div id="templatemo_header">
+        	AU DORM
+        </div>
+    </div> <!-- end of header section -->
+    
+    <div id="templatemo_menu_login_section">
+    	<div id="templatemo_menu_section">
+        	<div id="templatemo_menu_panel">
+                <!-- ここメニュー -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dorms.html" class="current">Dorm List</a></li>
+                    <li><a href="#">Student</a></li>
+                    <li><a href="#">Owners</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>                   
+                </ul> 
+            </div> <!-- end of menu -->
+        </div>
+        <!--ここログインセッション-->
+        <div id="templatemo_login_section">
+        	<form id="login_controller" method="get" action="#">
+                <!--ここにログインメニューが表示される-->
+            </form>
+        </div>
+    </div> <!-- end of menu login section -->
+</div> <!-- end of top panel -->
+
+<div id="templatemo_gallery_panel">
+<div id="gallery">
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img id="showcase" src="images/showcaseLoading.gif" style="width:100%" height="250px">
+      <div id="showcaseName" class="text">Dorm name</div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+    </div>
+  </div>
+  <br>
+  
+</div>
+<script type="text/javascript" src="slide.js"></script>
+<!-- <script type="text/javascript" src="slide.js"></script> -->
+
+</div>
+<!-- ここから寮のリスト-->
+<div id="templatemo_content_panel_1">
+    <div id="dormitory_list_section">
+        <h1>Dormitory list</h1>
+            <!--ここにリスト-->
+    </div>
+</div>
+
+
+<div id="templatemo_footer_panel">
+    Copyright © 2048 <a href="index.html">Your Company Name</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_blank">Free CSS Templates</a></div>
+</div> <!-- 一番最後 -->
+<!-- <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>-->
+</body> 
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  checkLoginStatus();
+  var config = {
+    apiKey: "AIzaSyBO3AHVZG4mF5WvJvVfX-RcWrNceWku5u4",
+    authDomain: "audorm-c6dae.firebaseapp.com",
+    databaseURL: "https://audorm-c6dae.firebaseio.com",
+    projectId: "audorm-c6dae",
+    storageBucket: "audorm-c6dae.appspot.com",
+    //messagingSenderId: "715848706924"
+  };
+  firebase.initializeApp(config);
+    var database = firebase.database();
+    var ref = database.ref("Dormitory");
+    ref.once("value").then(function(snapshot){
+        var counter = 0;
+        var dormitories = [];
+        snapshot.forEach(function(childSnapshot) {
+        var imageURL = childSnapshot.child("thumbnail").val();
+        var dormitoryName = childSnapshot.child("name").val();
+        var dormitory = {name:(""+dormitoryName), image:(""+imageURL)};
+        dormitories.push(dormitory);
+        });
+        dormitories.sort(function(a, b){
+            var keyA = a.name,
+                keyB = new Date(b.name);
+            // Compare the 2 dates
+            if(keyA < keyB) return -1;
+            if(keyA > keyB) return 1;
+            return 0;
+        });
+        var nowIndex = '無';
+        var index = "dormitory_list_section";
+        var ul = document.createElement('ul');
+        dormitories.forEach(function(dormitory){
+            var firstCharacter = dormitory.name[0];
+            if(firstCharacter != nowIndex)
+            {
+                var newIndex = document.createElement("h2");
+                newIndex.innerHTML = firstCharacter;
+                ul = document.createElement('ul');
+                document.getElementById(index).appendChild(newIndex);
+                document.getElementById(index).appendChild(ul);
+                nowIndex = firstCharacter;
+            }
+            var li = document.createElement('li');
+            var newDorm = "<a href='' id='noimg'>"+dormitory.name+"</a>";
+            if(dormitory.image != null)
+            {
+                newDorm = newDorm.replace("id='noimg'","onmouseover=changeDormImg('"
+                                            +dormitory.name.replace(/ /g,"空")  //replace space to special character which be cause of error inverid syntax error.
+                                            +"','"+ dormitory.image +"')");
+                //.replace(/ /g,"")
+            }
+            li.innerHTML = newDorm;
+            ul.appendChild(li);
+        });
+        console.log(dormitories);
+    });
+    function loginByOwner(){
+        var isLogin = login(ref);
+    }
+</script>
+</html>

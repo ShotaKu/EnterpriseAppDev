@@ -3,6 +3,8 @@
 <head>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script type="text/javascript" src="login.js"></script>
+    <link rel="icon" href="images/icon.JPG">
+    <script src="jquery-3.3.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>AU Dorm</title>
@@ -30,8 +32,8 @@
                 <ul>
                     <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="dorms.html">Dorm List</a></li>
-                    <li><a href="#">Student</a></li>
-                    <li><a href="#">Owners</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="owners.html">Owners</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>                   
                 </ul> 
@@ -40,9 +42,7 @@
         <!--ここログインセッション-->
         <div id="templatemo_login_section">
         	<form id="login_controller" method="get" action="#">
-                <label>Owner ID:</label><input type="text" id="ownerID" name="email" class="input_field" />
-                <label>Password:</label><input type="password" id="password" name="password" class="input_field" />
-                <input type="submit" value="Login" name="submit" class="submit_btn" onclick="loginByOwner()" />
+                <!-- <script>checkLoginStatus();</script> -->
             </form>
         </div>
     </div> <!-- end of menu login section -->
@@ -241,6 +241,7 @@
 </body> 
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script>
+    checkLoginStatus();
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBO3AHVZG4mF5WvJvVfX-RcWrNceWku5u4",
@@ -317,14 +318,8 @@ dataRef.once("value")
             }
         });
     })
-    function loginByOwner(){
-        var isLogin = login(dataRef);
-        // if(isLogin){
-        //     var loginElement = document.getElementById("templatemo_login_section");
-        //     while (loginElement.firstChild) {
-        //         loginElement.removeChild(loginElement.firstChild);
-        //     }
-        // }
-    }
+function loginByOwner(){
+    var isLogin = login(dataRef);
+}
 </script>
 </html>
