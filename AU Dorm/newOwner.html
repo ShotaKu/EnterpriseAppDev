@@ -14,40 +14,12 @@
     <link href="registration_style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="gallery_style.css" />
     <script src="login.js"></script>
+    <script src="commonLayout.js"></script>
 </head>
 <body>
 <div id="templatemo_container">
      <!--ここからヘッダー-->
-<div id="templatemo_top_panel">
-	<div id="templatemo_header_section">
-        <!--ここタイトル-->
-		<div id="templatemo_header">
-        	AU DORM
-        </div>
-    </div> <!-- end of header section -->
-    
-    <div id="templatemo_menu_login_section">
-    	<div id="templatemo_menu_section">
-        	<div id="templatemo_menu_panel">
-                <!-- ここメニュー -->
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="dorms.html" class="current">Dorm List</a></li>
-                    <li><a href="#">Student</a></li>
-                    <li><a href="#">Owners</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>                   
-                </ul> 
-            </div> <!-- end of menu -->
-        </div>
-        <!--ここログインセッション-->
-        <div id="templatemo_login_section">
-        	<form id="login_controller" method="get" action="#">
-                <!--ここにログインメニューが表示される-->
-            </form>
-        </div>
-    </div> <!-- end of menu login section -->
-</div> <!-- ヘッダー終わり -->
+         <script>showHeader();</script> 
 
 <div id="templatemo_content_panel_1">
     <div id="registration_form_section">
@@ -169,6 +141,7 @@
         isAvailable.type = "checkbox";
         isAvailable.id = "rAvailable"+(i+1);
         newRoomNumber.appendChild(isAvailable);
+        
         var isAvailableLabel = document.createElement("label");
         isAvailableLabel.innerHTML = "Is available";
         newRoomNumber.appendChild(isAvailableLabel);
