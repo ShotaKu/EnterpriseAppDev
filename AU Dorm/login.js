@@ -1,76 +1,85 @@
-var id = "";
-var password = "";
-function login(ref){
-    if(id == ""){
-        var tempID = document.getElementById("ownerID").value;
-        var tempPass = document.getElementById("password").value;
+var isLogined = false;
 
-        if(0<tempID.length){
-            if(0<tempPass.length){
-                ref.once("value")
-                .then(function(snapshot){
-                    var isExist = false;
-                    var isCollectPass = false;
-                    var i = 0;
-                    while(i<snapshot.child.length){
-                        var dorm = snapshot.child(i);
-                        var user = dorm.child("Owner");
-                        var dbid = user.child("id").val();
 
-                        console.log("now: "+dbid);
-
-                        var email = user.child("email").val();
-                        var pass = user.child("password").val();
-                        if(dbid == tempID || email == tempID){
-                            if(pass == tempPass){
-                                console.log("conform id　by owner!");
-                                isExist = true;
-                                isCollectPass = true;
-                                id = tempID;
-                                break;
-                            }
-                            else{
-                                console.log("Invarid passwords: "+tempPass);
-                                break;
-                            }
-                        }
-                        if(!isExist){
-                            var staffList = dorm.child("Staff");
-                            var j = 0;
-                            while(j<staffList.length){
-                                dbid = staff.child("id").val();
-                                email = staff.child("email").val();
-                                pass = staff.child("password").val();
-                                if(dbid == tempID || email == tempID){
-                                    if(pass == tempPass){
-                                        console.log("conform id　by staff!");
-                                        id = tempID;
-                                        isExist = true;
-                                        break;
-                                    }else{
-
-                                    }
-                                }
-                                j++;
-                            }
-                            if(isExist){
-                                break;
-                            }
-                        }
-                        i++;
-                    }
-                    if(isExist){
-                        logined();
-                        setLocalValue(id,password);
-                    }
-                    return isExist;
-                });
-            }
-        }
-    }else{
+function login(){
+    var email = $("#ownerID")[0].value;
+    var password = $("#password")[0].value;
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
         logined();
-    }
+    }).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorMessage+" !");
+    });
+}
 
+function logout(){
+    firebase.auth().signOut().then(function() {
+        alert("Login success full");
+        Logouted();
+    }).catch(function(error){
+        alert("Error: " + error);
+    });
+}
+
+function getUserProfile(){
+    var user = firebase.auth().currentUser;
+
+    if (user != null) {
+        console.log(user.name+"logined now")
+    }
+    return user;
+}
+
+function isUserExist(database,userName){
+    var ref = database.ref("Staff");
+    if(0<userName.length){
+        var func = 
+        ref.once("value").then(function(snapshot){
+            var isExist = false;
+            snapshot.forEach(function(staffTable){
+                var owner = staffTable.child("owner");
+                var staffs = staffTable.child("staff");
+                if(owner != null){
+                    var name = owner.child("userName").val()
+                    if(name == userName){
+                        isExist = true;
+                        break;
+                    }
+                }
+
+                if(staffs != null){
+                    staffs.forEach(function(staff){
+                        var name = staff.child("userName").val()
+                        if(name == userName){
+                            isExist = true;
+                            break;
+                        }
+                    })
+                }
+                if(isExist){
+                    break;
+                }
+            });
+            return isExist;
+        }).catch(function(error){
+            alert('error:  ' + error);
+        });
+        return func;
+    }
+}
+
+function setLocalValue(id,password){
+    sessionStorage.setItem("id",id);
+    sessionStorage.setItem("password",password);
+}
+
+function getLocalValue(){
+    var value = {id:"", password:""};
+    value.id = sessionStorage.getItem("id");
+    value.password = sessionStorage.getItem("password");
+
+    return value;
 }
 
 function logined(){
@@ -104,27 +113,6 @@ function logined(){
     loginElement.appendChild(logoutBtn);
 }
 
-function logout(){
-    id = "";
-    password = "";
-    setLocalValue("","","");
-    Logouted();
-}
-
-function setLocalValue(id,password){
-    
-    sessionStorage.setItem("id",id);
-    sessionStorage.setItem("password",password);
-}
-
-function getLocalValue(){
-    var value = {id:"", password:""};
-    value.id = sessionStorage.getItem("id");
-    value.password = sessionStorage.getItem("password");
-
-    return value;
-}
-
 function Logouted(){
     // <label>Owner ID:</label><input type="text" id="ownerID" name="email" class="input_field" />
     var loginElement = document.getElementById("login_controller");
@@ -147,13 +135,12 @@ function Logouted(){
 
     // <input type="submit" value="Login" name="submit" class="submit_btn" onclick="loginByOwner()" />
     var submit = document.createElement("input");
-    submit.type = "submit"
+    //submit.type = "submit"
     submit.value = "Login";
     submit.id = "login"
-    submit.name = "submit";
+    // submit.name = "submit";
     submit.className = "submit_btn";
-
-    submit.onclick = function(){ loginByOwner() };
+    submit.onclick = function(){ login() };
 
     loginElement.appendChild(ownerID);
     loginElement.appendChild(IDinput);
@@ -165,13 +152,14 @@ function Logouted(){
 
 function checkLoginStatus()
 {
-    var local = getLocalValue();
-    if(local.id == "" || local.id == null){
-        Logouted();
-    }
-    else{
-        id = local.id;
-        password = local.password;
-        logined();
-    }
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log("Already logined")
+          logined();
+        } else {
+            console.log("not login yet")
+            Logouted();
+        }
+    });
+
 }

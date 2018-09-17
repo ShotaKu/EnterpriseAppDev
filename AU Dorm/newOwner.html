@@ -14,6 +14,7 @@
     <link href="registration_style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="gallery_style.css" />
     <script src="login.js"></script>
+    <script src="registration.js"></script>
     <script src="commonLayout.js"></script>
 </head>
 <body>
@@ -29,19 +30,17 @@
         <h2>Owner Informations</h2>
         <ul class="menu">
                 <li><label>Name*:</label></li>
-                    <li><input class="registration_input" id="oName" placeholder="Dormitory name"></li>
+                    <li><input class="registration_input" id="oName" placeholder="Your name"></li>
                 <li><label>User Name*:</label></li>
-                    <li><input class="registration_input" id="oUserName" placeholder="Dormitory name"></li>
+                    <li><input class="registration_input" id="oUserName" placeholder="User name"> Can use when login</li>
                 <li><label>Mobile Phone Number*:</label></li>
                     <li><input class="registration_input" id="oPhone" placeholder="e.g. 095999999"></li>
                 <li><label>E-mail Address*:</label></li>
                     <li><input class="registration_input" id="oEmail" placeholder="example@example.com"></li>
-                <li><label>Address*:</label></li>
-                    <li><input class="registration_input" id="oAddress" placeholder="Address"></li>
                 <li><label>Password*:</label></li>
                     <li><input class="registration_input" id="oPassword" placeholder="More than 6 characters"></li>
-                <li><label>Password*:</label></li>
-                    <li><input class="registration_input" id="oPassword" placeholder="More than 6 characters"></li>
+                <li><label>Conform Password*:</label></li>
+                    <li><input class="registration_input" id="pConform" placeholder="More than 6 characters"></li>
         </ul>
 
         <h2>Dormitory Informations</h2>
@@ -56,21 +55,22 @@
             <li><label>Discription*:</label></li>
                 <li><textarea class="registration_input" id="dDetail" placeholder="e.g. Can walk to university in 5 min."></textarea></li>
             <li><label>Thumbnail*:</label></li>
-                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="dThumbnail" placeholder="Address"></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="dThumbnail"></li>
         </ul>
 
         <h2>Create first room</h2>
+        <p>This information can edit after registration.</p>
         <ul class="menu" id="RoomEdit">
+            <li><label>Price(per month):</label></li>
+                <li><input class="registration_input" id="rPrice" placeholder="price"></li>
+            <li><label>Area:</label></li>
+                <li><input class="registration_input" id="rArea" placeholder="000x000cm"></li>
             <li><label>Appeal Point:</label></li>
                 <li><textarea class="registration_input" id="rPoint" placeholder="e.g. Romm have good view and beautiful lighting"></textarea></li>
-            <li><label>Thumbnail:</label></li>
-                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rThumbnail" placeholder="Address"></li>
-            <li><label>Room layout:</label></li>
-                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rlayout" placeholder="Address"></li>
-            <li><label>Appeal Image 1:</label></li>
-                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rImage1" placeholder="Address"></li>
-            <li><label>Appeal Image 2:</label></li>
-                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rImage2" placeholder="Address"></li>
+            <li><label>Thumbnail*:</label></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rThumbnail" ></li>
+            <li><label>Room layout*:</label></li>
+                <li><input type="file" accept="image/x-png,image/gif,image/jpeg" id="rlayout"></li>
             <li><label>Room Number 1*:</label></li>
                 <li>
                     <input class="room_number_input" id="rNumber1" placeholder="Room number">
@@ -87,7 +87,7 @@
         </ul>
         <ul class="menu">
             <li></li>
-                <li><button class="registration_type" onclick="registration()">Send</button></li>
+                <li><button class="registration_type" onclick="registratNewDorm()">Send</button></li>
         </ul>
         <!-- <form></form> -->
     </div>
@@ -102,7 +102,7 @@
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script>
   // Initialize Firebase
-    checkLoginStatus();
+    
     var config = {
         apiKey: "AIzaSyBO3AHVZG4mF5WvJvVfX-RcWrNceWku5u4",
         authDomain: "audorm-c6dae.firebaseapp.com",
@@ -112,12 +112,15 @@
         //messagingSenderId: "715848706924"
     };
     firebase.initializeApp(config);
-        
-        function loginByOwner(){
-            var isLogin = login(ref);
-        }
-    function registration(){
-        console.log("Sended");
+    var database = firebase.database();
+    //var ref = database.ref('Dormitory');
+    checkLoginStatus();
+    
+    function registratNewDorm(){
+        registration(database).then(function(finish){
+            console.log("finish");
+        })
+        console.log("In progress");
     }
     var i = 1;
     function addMore(){
@@ -125,11 +128,9 @@
         var newRoom = document.createElement("LI");
         var label = document.createElement("label");
         label.innerHTML = "Room number "+(i+1)+":";
+        label.id = "roomNumberLb"+(i+1);
         newRoom.appendChild(label);
-        // <li>
-        //  <input class="room_number_input" id="rNumber1" placeholder="Room number">
-        //  <input type="checkbox" id="rAvailable1"><label>Is available</label>
-        //</li>
+
         var newRoomNumber = document.createElement("li");
         var input = document.createElement("input");
         input.id = "rNumber"+(i+1);
@@ -143,14 +144,27 @@
         newRoomNumber.appendChild(isAvailable);
         
         var isAvailableLabel = document.createElement("label");
+        isAvailableLabel.id = "isALabel"+(i+1);
         isAvailableLabel.innerHTML = "Is available";
         newRoomNumber.appendChild(isAvailableLabel);
 
         var list = document.getElementById("RoomEdit");
-        console.log(list.id+":"+($('#RoomEdit').length));
+        //console.log(list.id+":"+($('#RoomEdit').length));
         list.insertBefore(newRoom, list.children[list.children.length-2]);   
-        list.insertBefore(newRoomNumber, list.children[list.children.length-2]);     
+        list.insertBefore(newRoomNumber, list.children[list.children.length-2]); 
+        console.log(getAllRoomNumber());    
         i++;
     }
+    function remove(){
+        if(1<i){
+            $("#roomNumberLb"+(i)).remove();
+            $("#rNumber"+(i)).remove();
+            $("#rAvailable"+(i)).remove();
+            $("#isALabel"+(i)).remove();
+            i--;
+        }
+    }
+        
+        
 </script>
 </html>
