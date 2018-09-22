@@ -1,0 +1,17 @@
+.searchBar{
+    width: 100%;
+    margin-left: 15%;
+}
+
+.searchBox{
+    width: 60%;
+}
+
+.searchLabel{
+    font-display: inherit;
+    font-weight: 500;
+    color: #5a88ca;
+    width: 20%;
+    margin-right: 40%;
+    margin-left: 40%;
+}

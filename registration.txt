@@ -1,0 +1,210 @@
+function registration(database){
+    var name = $("#oName")[0].value
+    var user = $("#oUserName")[0].value
+    var phone = $("#oPhone")[0].value
+    var email = $("#oEmail")[0].value
+    var password = $("#oPassword")[0].value;
+    var conform = $("#pConform")[0].value;
+    var error = "";
+    if (0 < user.length) {
+
+        isUserExist(database, user).then(function (isExist) {
+            if(!isExist){
+                var isConformed = password == conform;
+                if(isConformed){
+                    var dormID = guid();
+                    //Create staff
+                    var newOwner = createStaff(name, user, phone, email);
+                    if (newOwner != null) {
+                        var dName = $("#dName")[0].value;
+                        if (empty(dName)) {
+                            var dPhone = $("#dPhone")[0].value;
+                            var dLocation = $("#dPhone")[0].value;
+                            var dDetail = $("#dDetail")[0].value;
+                            const dThumb = document.getElementById("dThumbnail").files[0];
+                            var uploadFinish = uploadImage(dThumb,dormID);
+                            if(uploadFinish != null){
+                                uploadFinish.then(function (dThumbURL) {
+                                    var newDorm = createNewDorm(dName, dPhone, dLocation, dDetail, dThumbURL);
+                                    if (newDorm != null) {
+                                        var rPoint = $("#rPoint")[0].value;
+                                        var price =  $("#rPrice")[0].value;
+                                        var area = $("#rArea")[0].value;
+                                        var rThumb = document.getElementById("rThumbnail").files[0];
+                                        var rLayout = document.getElementById("rlayout").files[0];
+                                        var rooms = getAllRoomNumber();
+                                        createNewRoom(guid(),rPoint,price,area,rThumb,rLayout,rooms)
+                                        .then(function(newRoom){
+                                                var StaffRef = database.ref("Staff");
+                                                var d = new Date();
+                                                var ownerID = pushAt(database,"Staff",newOwner);
+                                                var newData = {
+                                                    owner:ownerID
+                                                    ,information:newDorm
+                                                    ,lastEdit:d.getTime()
+                                                    ,newRoom
+                                                }
+                                                pushAt(database,"Dormitory",newData)
+                                                firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+                                                        // Handle Errors here.
+                                                    var errorCode = error.code;
+                                                    var errorMessage = error.message;
+                                                    console.log(errorCode+":"+errorMessage);
+                                                        // ...
+                                                });
+                                                return "Success!";
+                                            })
+                                        // }else{
+                                        //     //Some information not filled
+                                        //     return "Some information not filled/NewRoom";
+                                        // }
+                                    }else{
+                                        //upload faild
+                                        return "Upload image failed"
+                                    }
+                                })
+                            }
+                        }
+                    } else {
+                        //didnt enter some informations at owner information.
+                        return "Some information not filled/Owner";
+                    }
+                }
+    
+                if (isExist) {
+                    //User already exist
+                    error += "User name already exist/";
+                }
+                if (!isConformed) {
+                    //Password not same
+                    error += "Password conform failed/";
+                }
+            }
+        })
+    }
+}
+
+function pushAt(database,at,object){
+    var ref = database.ref(at);
+    return ref.push(object).key;
+}
+
+function getAllRoomNumber() {
+    var r = 1;
+    var rooms = [];
+    while (true) {
+        var num = $("#rNumber" + r)[0];
+        if(num != undefined){
+            var rNumber = $("#rNumber" + r)[0].value;
+            if(0<rNumber.length){
+                var isAvailable = document.getElementById('rAvailable'+r).checked;
+                rooms.push({roomNumber:num.value, isAvailable:isAvailable});
+            }
+            r++;
+        } else {
+            break;
+        }
+    }
+    return rooms;
+}
+function createRoomNumber(num,isAvailable){
+    return {roomNumber:num,isAvailable:isAvailable};
+}
+
+function uploadImage(imageFile,fileName){
+    const storage = firebase.storage().ref();
+    const metadata = { contentType: imageFile.type };
+    if (imageFile != null) {
+        //Upload file to storage
+        return storage.child(fileName).put(imageFile, metadata)
+                .then(snapshot => snapshot.ref.getDownloadURL());
+    }
+    return null;
+}
+
+function createNewDorm(name, phone, location, discription, thumbnail){
+
+    if (empty(name)) {
+        if (empty(phone)) {
+            if (empty(location)) {
+                if (empty(discription)) {
+                    if (empty(thumbnail)) {
+                        return {
+                            name: name,
+                            phone: phone,
+                            location: location,
+                            discription,
+                            Thumbnail: thumbnail
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return null;
+}
+function createStaff(name,userName,phone,email){
+    var inputPhone = empty(phone);
+    var inputEmail = empty(email);
+    var inputName = empty(name);
+    var inputUName = empty(userName);
+            //password same
+            if(inputPhone){
+                if(inputEmail){
+                    if(inputEmail){
+                        if(inputName){
+                            if(inputUName){
+                                var newStaff = {
+                                    name:name,
+                                    userName:userName,
+                                    tel:phone,
+                                    email:email
+                                };
+                                return newStaff;
+                            }
+                        }
+                    }
+                }
+            }
+        
+    return null;
+}
+function createNewRoom(name, rPoint, price, area, Thumbnail, rLayout, rooms) {
+    if (empty(rPoint)) {
+        if (Thumbnail != null) {
+            if (rLayout != null) {
+                var tUpload = uploadImage(Thumbnail, name + "-rThumb");
+                return tUpload.then(function (tuURL) {
+                    var rlUpload = uploadImage(rLayout, name + "-rLayout");
+                    return rlUpload.then(function(rlURL){
+                        return {tuURL:tuURL, rlURL:rlURL};
+                    })
+                }).then(function(ret){
+                        return {
+                            appealPoint: rPoint,
+                            price: price,
+                            thumbnail: ret.tuURL,
+                            roomLayout: ret.rlURL,
+                            rooms: rooms,
+                            area: area
+                        }
+                })
+            }
+            return null;
+        }
+        return null;
+    }
+    return null;
+}
+function empty(input){
+    return 0 < input.length;
+}
+
+function guid() {
+    function s4() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}

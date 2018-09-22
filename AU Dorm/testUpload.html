@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <link rel="icon" href="images/icon.JPG">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="registration.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AU Dorm</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="slideShow.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="gallery_style.css" />
+    <script src="commonLayout.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script> -->
+</head>
+<body>
+    <input type="file" accept="image/x-png,image/gif,image/jpeg" id="imageFile">
+    <button class="registration_type" onclick="testUpload()">Send</button>
+    <label id="url">URL:</label>
+</body> 
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+<script>
+    
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBO3AHVZG4mF5WvJvVfX-RcWrNceWku5u4",
+    authDomain: "audorm-c6dae.firebaseapp.com",
+    databaseURL: "https://audorm-c6dae.firebaseio.com",
+    projectId: "audorm-c6dae",
+    storageBucket: "audorm-c6dae.appspot.com",
+    //messagingSenderId: "715848706924"
+  };
+  firebase.initializeApp(config);
+ 
+    
+var database = firebase.database();
+var id =  database.ref('test').push({
+        testObject:{
+            name:"tester",
+            array:[{name:"a",number:"1"}
+            ,{name:"b",number:"2"}
+            ,{name:"c",number:"3"}
+            ,{name:"d",number:"4"}]
+        }
+    }).key;
+    console.log(id);
+function testUpload(){
+    var file =  document.getElementById("imageFile").files[0];
+    uploadImage(file,"testing").then(function(url){
+        console.log(url);
+        document.getElementById("url").innerHTML = url;
+    })
+}
+</script>
+</html>
