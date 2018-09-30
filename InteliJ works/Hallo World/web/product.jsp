@@ -1,8 +1,8 @@
-<%@ page import="java.io.*,java.util.*,java.sql.*" %>
-<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
-<%@ page import="com.mysql.jdbc.*" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@ page import = "com.mysql.jdbc.*" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <sql:query dataSource="jdbc/affablebean" var="result">
     SELECT * FROM category
@@ -33,14 +33,11 @@
             <td>Category</td>
             <td>
                 <select name="category_id">
-                    <%--<option value="1">Cat 1</option>--%>
-                    <%--<option value="2">Cat 2</option>--%>
-                    <%--<option value="3">Cat 3</option>--%>
-                        <c:forEach var="row" items="${result.rows}">
-                            <option value='<c:out value="${row.id}"/>'>
-                                <c:out value="${row.name}"/>
-                            </option>
-                        </c:forEach>
+                    <c:forEach var="row" items="${result.rows}">
+                        <option value='<c:out value="${row.id}"/>'>
+                        <c:out value="${row.name}"/>
+                        </option>
+                    </c:forEach>
                 </select>
             </td>
         </tr>

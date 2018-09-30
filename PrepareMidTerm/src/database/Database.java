@@ -12,7 +12,7 @@ public class Database {
     private String password;
     private Connection connection;
     private Statement statement;
-//    private ResultSet resultset;
+    private ResultSet resultset;
     /**
      * コンストラクタ
      * @param driver ドライバー
@@ -20,7 +20,7 @@ public class Database {
      * @param user ユーザー名
      * @param password パスワード
      */
-    public Database(String driver, String url, String user, String password) {
+    protected Database(String driver, String url, String user, String password) {
         this.driver = driver;
         this.url = url;
         this.user = user;
@@ -31,6 +31,7 @@ public class Database {
      * 引数なしのコンストラクタ
      * 既定値を使用する
      */
+    //Fixme: Edit parameters when using!!!!!!!
     public Database() {
         driver = "com.mysql.jdbc.Driver";
         url = "jdbc:mysql://localhost:3306/system_card";
@@ -70,8 +71,12 @@ public class Database {
      * データベースへのコネクションのクローズ
      */
     public synchronized void close() throws Exception {
-        if ( resultset != null ) resultset.close();
+        if ( this.resultset != null ) this.resultset.close();
         if ( statement != null ) statement.close();
         if ( connection != null ) connection.close();
+    }
+
+    public Connection getConnection() {
+        return connection;
     }
 }

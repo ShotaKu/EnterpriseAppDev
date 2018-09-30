@@ -21,16 +21,23 @@ public class ProductServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        // Deletion
+        String id = request.getParameter("id");
+        String cmd = request.getParameter("cmd");
+
+        // Insertion
         String name = request.getParameter("name");
         String price = request.getParameter("price");
         String description = request.getParameter("description");
         String category_id = request.getParameter("category_id");
 
+
         // Set response content type
         response.setContentType("text/html");
-
-        // Actual logic goes here.
         PrintWriter out = response.getWriter();
+
+
+        // Insertion
         out.println(name+"<br/>");
         out.println(price+"<br/>");
         out.println(description+"<br/>");
@@ -51,21 +58,37 @@ public class ProductServlet extends HttpServlet {
             DataSource ds = (DataSource)envContext.lookup("java:/comp/env/jdbc/affablebean");
             Connection con = ds.getConnection();
 
-            String sql = "insert into product (name,price,description,category_id)  values (?,?,?,?)";
 
-            PreparedStatement stmt=con.prepareStatement(sql);
-            stmt.setString(1,name);
-            stmt.setDouble(2,Double.parseDouble(price));
-            stmt.setString(3,description);
-            stmt.setInt(4,Integer.parseInt(category_id));
+            String sql = "";
+            if (cmd != null && cmd.equals("d")) {
+                // Delete a product
+                sql = "DELETE FROM product WHERE id = ?";
+                PreparedStatement stmt = con.prepareStatement(sql);
+                stmt.setInt(1, Integer.parseInt(id));
+                stmt.execute();
+            } else if (cmd != null && cmd.equals("u")) {
+                // Update a product
+                sql = "UPDATE product SET name = ?, price = ?, description = ?, category_id = ? WHERE id = ?";
+                PreparedStatement stmt=con.prepareStatement(sql);
+                stmt.setString(1,name);
+                stmt.setDouble(2,Double.parseDouble(price));
+                stmt.setString(3,description);
+                stmt.setInt(4,Integer.parseInt(category_id));
+                stmt.setInt(5,Integer.parseInt(id));
+                stmt.execute();
 
-//            int r = stmt.executeUpdate();
-            if(stmt.execute()) {
-                out.println("Successfully inserted");
             } else {
-                out.println("Unable to insert");
+                // Insert a new product
+                sql = "insert into product (name,price,description,category_id)  values (?,?,?,?)";
+                PreparedStatement stmt=con.prepareStatement(sql);
+                stmt.setString(1,name);
+                stmt.setDouble(2,Double.parseDouble(price));
+                stmt.setString(3,description);
+                stmt.setInt(4,Integer.parseInt(category_id));
+                stmt.execute();
             }
 //            out.println("Row affect "+r+"<br>");
+            response.sendRedirect("products.jsp");
 
         }  catch (SQLException | NamingException e) {
             e.printStackTrace();

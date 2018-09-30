@@ -1,56 +1,47 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 2018/09/24
-  Time: 午後 6:42
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page import="java.text.SimpleDateFormat"%>
-<%@ page import="database.Database" %>
-<%@ page import="java.sql.ResultSet" %>
+<%@ page import="database.dataClass.Card" %>
+<%@ page import="database.readController.ReadCardController" %>
+
+<%@ page import="database.tableFactory.TableFactory" %>
 <%
-  // 内容: データベースにアクセスする
+// Table header!
+    //Fixme: Fix table head instead of data fields.
+    String tableHTML = "<table border=1>";
+    tableHTML += "<tr bgcolor=\"000080\"><td><font color=\"white\">メンバーID</font></td>"
+            + "<td><font color=\"white\">名前</font></td>"
+            + "<td><font color=\"white\">ブランド</font></td>"
+            + "<td><font color=\"white\">キャッシュバック</font></td>"
+            + "<td><font color=\"white\">おすすめ度</font></td>"
+            + "<td><font color=\"white\">対象</font></td>";
+    int i = 0;
 
-// MyDBAccess のインスタンスを生成する
-  Database db = new Database();
+    // Get all cards.
+    ReadCardController gController = new ReadCardController();
+    Card[] cards = gController.getAll();
 
-// データベースへのアクセス
-  db.open();
+    //Create table
+    for (Card card : cards) {
+        TableFactory tFactory = new TableFactory();
+        tableHTML += tFactory.createHTMLTable(card);
+    }
 
-// メンバーを取得
-  ResultSet rs = db.getResultSet("select * from card");
-
-// メンバー一覧表示用のテーブル
-  String tableHTML = "<table border=1>";
-  tableHTML += "<tr bgcolor=\"000080\"><td><font color=\"white\">メンバーID</font></td>"
-          + "<td><font color=\"white\">名前</font></td>";
-
-// 取得された各結果に対しての処理
-  while(rs.next()) {
-
-    int id = rs.getInt("id"); // メンバーIDを取得
-    String name = rs.getString("name"); // メンバー名を取得
-
-    // 文字コードを EUC_JP からUnicode へ変換
-    //name = new String(name.getBytes("8859_1"), "EUC_JP");
-
-    // テーブル用HTMLを作成
-    tableHTML += "<tr><td align=\"right\">" + id + "</td>"
-            + "<td>" + name + "</td>";
-  }
-
-  tableHTML += "</table>";
-
-// データベースへのコネクションを閉じる
-  db.close();
-
+    tableHTML += "</table>";
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<script>
+    function confirmDelete(id) {
+        if (confirm("Are you sure to delete" + id + "?")) {
+            // Fixme: change controller name here!
+            window.location = "card-controller?cmd=d&id=" + id;
+        }
+    }
+</script>
+<head>
     <title>$Title$</title>
-  </head>
-  <body>
-  <%= tableHTML %>
-  </body>
+</head>
+<body>
+<h1>Credit cards</h1>
+<a href="createCard.jsp">Add</a> <a href="searchCard.jsp">Search</a>
+<%= tableHTML %>
+</body>
 </html>
