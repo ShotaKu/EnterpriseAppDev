@@ -22,7 +22,7 @@ public abstract class Controller<T> extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         command cmd = checkCmd(request.getParameter("cmd"));
 
-        int id = parseInt(request.getParameter("id"));
+        int id = parseInt(request.getParameter("emp_no"));
         T t = null;
 
         PrintWriter out = response.getWriter();

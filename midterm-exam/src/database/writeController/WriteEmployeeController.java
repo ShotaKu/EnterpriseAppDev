@@ -53,7 +53,7 @@ public class WriteEmployeeController extends WriteController<Employee> {
         try {
             //MEMO: Main fixing process is here.
             pStatement = super.getConnection()
-                    .prepareStatement("DELETE FROM employees WHERE id = "+id);
+                    .prepareStatement("DELETE FROM employees WHERE emp_no = "+id);
         } catch (SQLException e) {
             e.printStackTrace();
             pStatement = null;
