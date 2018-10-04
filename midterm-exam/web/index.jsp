@@ -26,7 +26,7 @@
     function confirmDelete(id) {
         if (confirm("Are you sure to delete" + id + "?")) {
             // Fixme: change controller name here!
-            window.location = "employee-controller?cmd=d&enp_no=" + id;
+            window.location = "employee-controller?cmd=d&emp_no=" + id;
         }
     }
 </script>
