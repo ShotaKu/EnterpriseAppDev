@@ -49,7 +49,15 @@ public class WriteEmployeeController extends WriteController<Employee> {
 
     @Override
     public PreparedStatement preparedStatementDelete(int id) {
-        //TODO
-        return null;
+        PreparedStatement pStatement = null;
+        try {
+            //MEMO: Main fixing process is here.
+            pStatement = super.getConnection()
+                    .prepareStatement("DELETE FROM employees WHERE id = "+id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            pStatement = null;
+        }
+        return pStatement;
     }
 }
