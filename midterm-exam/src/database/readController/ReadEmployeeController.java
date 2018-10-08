@@ -17,13 +17,13 @@ public class ReadEmployeeController extends ReadController<Employee> {
 
     @Override
     public Employee[] getAll() {
-        return super.getAllT("select * from employees LIMIT 10");
+        return super.getAllT("select * from employees");
     }
 
     @Override
     public Employee get(int id) {
         Employee[] cards = super.getAllT("select * from employees" +
-                "WHERE emp_no = " + id);
+                " WHERE emp_no = " + id);
         Employee result = null;
         if (0 < cards.length)
             result = cards[0];

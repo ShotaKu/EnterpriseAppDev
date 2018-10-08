@@ -25,8 +25,8 @@ public class Database {
     public Database() {
         driver = "com.mysql.jdbc.Driver";
         url = "jdbc:mysql://localhost:3306/employees";
-        user = "root";
-        password = "root";
+        user = "shota";
+        password = "shota77ben10";
     }
 
     public synchronized void open() throws Exception {

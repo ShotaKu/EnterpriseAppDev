@@ -31,12 +31,12 @@
     }
 </script>
 <head>
-    <title>$Title$</title>
+    <title>Employees</title>
 </head>
 <body>
-<h1>Products</h1>
+<h1>Employees</h1>
 <%--Fixme: change Add URL name here!--%> <%--Fixme: change Search URL name here!--%>
-<a href="addProduct.jsp">Add</a> <a href="searchProduct.jsp">Search</a>
+<a href="addEmployee.jsp">Add</a>
 <%= tableHTML %>
 </body>
 </html>

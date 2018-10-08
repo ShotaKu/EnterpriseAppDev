@@ -5,7 +5,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: affablebean
-      MYSQL_USER: user1
-      MYSQL_PASSWORD: user1
+      MYSQL_DATABASE: employees
+      MYSQL_USER: shota
+      MYSQL_PASSWORD: shota77ben10
       MYSQL_ROOT_PASSWORD: root

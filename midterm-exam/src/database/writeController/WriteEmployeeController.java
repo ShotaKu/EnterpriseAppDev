@@ -33,13 +33,14 @@ public class WriteEmployeeController extends WriteController<Employee> {
         try {
             //MEMO: Main fixing process is here.
             pStatement = super.getConnection()
-                    .prepareStatement("UPDATE product SET birth_date = ?, first_name = ?, last_name = ?, gender = ?, hire_date = ? WHERE id = ?");
-            pStatement.setString(1, product.getBirth_date()+"");
+                    .prepareStatement("UPDATE employees SET birth_date = ?, first_name = ?, last_name = ?, gender = ?, hire_date = ?, emp_no = ? WHERE emp_no = ?");
+            pStatement.setDate(1, product.getBirth_date());
             pStatement.setString(2, product.getFirst_name()+"");
             pStatement.setString(3, product.getLast_name());
             pStatement.setString(4, product.getGender()+ "");
-            pStatement.setString(5, product.getHire_date() + "");
+            pStatement.setDate(5, product.getHire_date());
             pStatement.setString(6,product.getEmp_no()+"");
+            pStatement.setString(7,product.getEmp_no()+"");
         } catch (SQLException e) {
             e.printStackTrace();
             pStatement = null;

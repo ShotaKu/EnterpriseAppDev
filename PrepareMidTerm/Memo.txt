@@ -1,0 +1,2 @@
+What is JNDI?
+It is part of the Java platform, providing applications based on Java technology with a unified interface to multiple naming and directory services. You can build powerful and portable directory-enabled applications using this industry standard.

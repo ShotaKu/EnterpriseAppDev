@@ -46,7 +46,7 @@ public class Employee {
             this.birth_date = Date.valueOf(request.getParameter("birth_date"));
             this.first_name = request.getParameter("first_name");
             this.last_name = request.getParameter("last_name");
-            this.gender = request.getParameter("last_name").charAt(0);
+            this.gender = request.getParameter("gender").charAt(0);
             this.hire_date =Date.valueOf(request.getParameter("hire_date"));
 //            name = request.getParameter("name");
 //            price = parseDouble(request.getParameter("price"));

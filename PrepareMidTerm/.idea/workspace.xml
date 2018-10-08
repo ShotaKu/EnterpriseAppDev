@@ -7,58 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="389b46d2-19fc-4a21-8de5-d75d0eb8723d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AffableBean/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/commonClasses/Double.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/database/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/database/dataClass/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/database/dataClass/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/database/readController/ReadCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/database/readController/ReadProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/database/readController/exampleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/src/database/writeController/WriteProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/web/addProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/web/searchProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AffableBean/web/updateProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commonClasses/Bool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commonClasses/Integer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/controller/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/readController/ReadBrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/readController/ReadCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/readController/ReadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/tableFactory/TableFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/writeController/WriteCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/writeController/WriteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/cardDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/createCard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/searchCard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/updateCard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AffableBean/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../AffableBean/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/src/affablebean/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/src/affablebean/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/products.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midterm-exam/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Brand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/readController/GetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PrepareMidTerm_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PrepareMidTerm/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrepareMidTerm/database/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PrepareMidTerm/database/dataClass/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrepareMidTerm/database/dataClass/Brand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PrepareMidTerm/database/dataClass/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrepareMidTerm/database/dataClass/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PrepareMidTerm/database/readController/GetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/dataClass/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/dataClass/Brand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/dataClass/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/dataClass/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/readController/GetController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm-exam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../midterm-exam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm-exam/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midterm-exam/src/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm-exam/src/database/dataClass/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midterm-exam/src/database/dataClass/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm-exam/web/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../midterm-exam/web/addProduct.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,13 +39,14 @@
     <session id="-1469294926">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -137,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/readController/ReadCardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="198">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -207,7 +162,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1928" />
     <option name="y" value="1068" />
     <option name="width" value="1936" />
@@ -219,9 +174,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,7 +269,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538043695816" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../midterm-exam" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -433,11 +388,12 @@
       <workItem from="1537935685550" duration="31843000" />
       <workItem from="1538023573354" duration="6802000" />
       <workItem from="1538032354740" duration="6804000" />
+      <workItem from="1539005730386" duration="868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62120000" />
+    <option name="totallyTimeSpent" value="62988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,9 +405,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="1068" width="1936" height="1056" extended-state="0" />
+    <frame x="-1928" y="1068" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14605543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -609,9 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,11 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#executeChange#0;class#WriteController#0" />
-            <element signature="method#delete#0;class#WriteController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,10 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="82" column="68" selection-start-line="82" selection-start-column="68" selection-end-line="82" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#checkCmd#0;class#Controller#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,9 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-363">
           <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -748,8 +690,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/readController/ReadCardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="198">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
