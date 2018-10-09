@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-//Fixme: Create new extends class of ReadController when using.
 public abstract class ReadController<T>{
     private Database db = null;
     protected ReadController(){ db = new Database(); }

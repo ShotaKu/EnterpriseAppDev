@@ -21,7 +21,6 @@ public class Database {
         this.password = password;
     }
 
-    //Fixme: Edit parameters only when using!!!!!!!
     public Database() {
         driver = "com.mysql.jdbc.Driver";
         url = "jdbc:mysql://localhost:3306/employees";

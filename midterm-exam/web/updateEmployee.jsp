@@ -5,7 +5,6 @@
 <%@ page import="static commonClasses.Integer.parseInt" %>
 <%@ page import="java.util.Date" %>
 <%
-    //Fixme: Change me when you use!
     String id = request.getParameter("id");
     String fname = "";
     String lname = "";
@@ -30,15 +29,14 @@
 %>
 <html>
 <head>
-    <title>New product</title>
+    <title>Update employee</title>
 </head>
 <body>
 
-<h2>Create new Employee!</h2>
+<h2>Update employee <%=fname%>!</h2>
 <form action="employee-controller">
     <input type="hidden" name="cmd" value="u">
     <input type="hidden" name="emp_no" value="<%=id%>">
-    <%--Fixme: Change form here!!--%>
     <table>
         <tr>
             <td>ID:</td>

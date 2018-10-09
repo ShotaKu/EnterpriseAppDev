@@ -5,7 +5,6 @@ import database.Database;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-//Fixme: Create new extends class of WriteController when using.
 public abstract class WriteController<T>{
     private Database db = null;
 

@@ -3,7 +3,6 @@ package database.tableFactory;
 import database.dataClass.Employee;
 
 public class TableFactory {
-    //Fixme: Create function with input custom class when use
     //Example start
     public static String getCardHTMLTableHead(){
         String tableHTML = "<table border=1>";

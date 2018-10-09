@@ -10,14 +10,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>New product</title>
+    <title>New employee</title>
 </head>
 <body>
 
 <h2>Create new card!</h2>
 <form action="employee-controller">
     <input type="hidden" name="cmd" value="c">
-    <%--Fixme: Change form here!!--%>
     <table>
         <tr>
             <td>ID:</td>

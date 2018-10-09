@@ -4,19 +4,16 @@
 <%@ page import="database.tableFactory.TableFactory" %>
 <%
     // Table header!
-    //Fixme: Fix table head instead of data fields.
     String tableHTML = TableFactory.getCardHTMLTableHead();
     int i = 0;
 
     // Get all cards.
-    //Fixme: Change value of name and controller name here when you use
     ReadEmployeeController gController = new ReadEmployeeController();
-    Employee[] products = gController.getAll();
+    Employee[] employees = gController.getAll();
 
     //Create table
-    for (Employee product : products) {
-        //Fixme: Create function for create table in TableFactory class
-        tableHTML += TableFactory.createHTMLTableRow(product);
+    for (Employee employee : employees) {
+        tableHTML += TableFactory.createHTMLTableRow(employee);
     }
     tableHTML += "</table>";
 %>
@@ -25,7 +22,6 @@
 <script>
     function confirmDelete(id) {
         if (confirm("Are you sure to delete" + id + "?")) {
-            // Fixme: change controller name here!
             window.location = "employee-controller?cmd=d&emp_no=" + id;
         }
     }
@@ -35,7 +31,6 @@
 </head>
 <body>
 <h1>Employees</h1>
-<%--Fixme: change Add URL name here!--%> <%--Fixme: change Search URL name here!--%>
 <a href="addEmployee.jsp">Add</a>
 <%= tableHTML %>
 </body>

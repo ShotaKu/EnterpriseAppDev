@@ -12,7 +12,6 @@ import java.io.PrintWriter;
 import static commonClasses.Integer.parseInt;
 
 
-//Fixme: Create new extend class for Controller<T> e.g. CardController T = Card.
 //No need to fix here.
 public abstract class Controller<T> extends HttpServlet {
     private enum command {c, r, u, d};
