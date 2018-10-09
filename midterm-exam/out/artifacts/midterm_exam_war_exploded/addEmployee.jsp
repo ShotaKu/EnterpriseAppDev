@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<h2>Create new card!</h2>
+<h2>Create new employee!</h2>
 <form action="employee-controller">
     <input type="hidden" name="cmd" value="c">
     <table>
