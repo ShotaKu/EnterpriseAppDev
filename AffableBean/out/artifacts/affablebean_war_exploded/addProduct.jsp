@@ -9,7 +9,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    //Fixme: Change me when you use!
+    //Fixme: Change here when you use!
     String brandOptions = "";
     int i = 0;
     ReadCategoryController controller = new ReadCategoryController();
@@ -17,6 +17,7 @@
 
     //Create brand options
     for (Category category: categories) {
+        //Fixme: Create function for create options in TableFactory class
         brandOptions += TableFactory.createHTMLOption(category,false);
     }
 %>
@@ -27,8 +28,10 @@
 <body>
 
 <h2>Create new card!</h2>
+<%--Fixme: Change Controller name here!!--%>
 <form action="product-controller">
     <input type="hidden" name="cmd" value="c">
+    <%--Fixme: Change form here!!--%>
     <table>
         <tr>
             <td>Name:</td>

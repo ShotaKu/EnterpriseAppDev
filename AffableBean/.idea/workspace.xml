@@ -7,58 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c31fb88-f1db-4904-8e1f-345568fb3127" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commonClasses/Double.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/dataClass/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/dataClass/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/readController/ReadCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/readController/ReadProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/readController/exampleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/writeController/WriteProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/addProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/searchProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/updateProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/commonClasses/Bool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/commonClasses/Integer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/controller/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/readController/ReadBrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/readController/ReadCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/readController/ReadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/tableFactory/TableFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/writeController/WriteCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/writeController/WriteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/web/cardDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/web/createCard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/web/searchCard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PrepareMidTerm/web/updateCard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/src/affablebean/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/src/affablebean/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../InteliJ works/Hallo World/web/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Brand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/dataClass/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/classes/database/readController/GetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/artifacts/PrepareMidTerm_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/production/PrepareMidTerm/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/production/PrepareMidTerm/database/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/production/PrepareMidTerm/database/dataClass/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/production/PrepareMidTerm/database/dataClass/Brand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/production/PrepareMidTerm/database/dataClass/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/out/production/PrepareMidTerm/database/dataClass/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/out/production/PrepareMidTerm/database/readController/GetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/src/database/dataClass/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/dataClass/Brand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/src/database/dataClass/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/src/database/dataClass/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/src/database/readController/GetController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PrepareMidTerm/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../PrepareMidTerm/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/cookies/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/cookies/hallo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/cookies/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/cookies/read.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/sessions/session.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/WEB-INF/classes/database/readController/ReadProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/WEB-INF/classes/database/readController/ReadProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/searchProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/searchProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/affablebean_war_exploded/updateProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/affablebean/database/readController/ReadProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/affablebean/database/readController/ReadProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midterm-exam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../midterm-exam/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,101 +105,84 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.spring.boot.mvc.usages" />
     </session>
+    <session id="-1998396678">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="jsp" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="JSP" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="jsp" value="460" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSP" value="460" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/writeController/WriteProductController.java">
+        <entry file="file://$PROJECT_DIR$/web/cookies/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="61" column="1" lean-forward="true" selection-start-line="8" selection-end-line="61" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#preparedStatementInsert#0;class#WriteProductController#0" />
-                <element signature="method#preparedStatementEdit#0;class#WriteProductController#0" />
-                <element signature="method#preparedStatementDelete#0;class#WriteProductController#0" />
-              </folding>
+            <state relative-caret-position="309">
+              <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/cookies/delete.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/cookies/hallo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/database/readController/ReadProductController.java">
+        <entry file="file://$PROJECT_DIR$/web/sessions/session.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="309">
+              <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/readController/ReadController.java">
+        <entry file="file://$PROJECT_DIR$/web/cookies/read.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getAllT#0;class#ReadController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/dataClass/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Product#0;class#Product#0" />
-                <element signature="method#Product#3;class#Product#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/readController/exampleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
-              <caret line="29" column="47" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#403#404#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#488#489#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/updateProduct.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1699">
-              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/dataClass/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="method#Category#2;class#Category#0" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -248,8 +192,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -280,6 +224,11 @@
         <option value="$PROJECT_DIR$/src/database/readController/exampleController.java" />
         <option value="$PROJECT_DIR$/web/searchProduct.jsp" />
         <option value="$PROJECT_DIR$/src/database/readController/ReadProductController.java" />
+        <option value="$PROJECT_DIR$/web/cookies/read.jsp" />
+        <option value="$PROJECT_DIR$/web/cookies/delete.jsp" />
+        <option value="$PROJECT_DIR$/web/cookies/main.jsp" />
+        <option value="$PROJECT_DIR$/web/cookies/hallo.jsp" />
+        <option value="$PROJECT_DIR$/web/sessions/session.jsp" />
       </list>
     </option>
   </component>
@@ -296,11 +245,11 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="3863" />
-    <option name="height" value="2123" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -312,52 +261,21 @@
         <subPane>
           <expand>
             <path>
-              <item name="affablebean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AffableBean" type="b2602c69:ProjectViewProjectNode" />
               <item name="AffableBean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="affablebean" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AffableBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="affablebean" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AffableBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="affablebean" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AffableBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="dataClass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="affablebean" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AffableBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="readController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="affablebean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AffableBean" type="b2602c69:ProjectViewProjectNode" />
               <item name="AffableBean" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="affablebean" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AffableBean" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,9 +286,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538043505910" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539678075566" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PrepareMidTerm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -464,11 +382,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538026665078</updated>
       <workItem from="1538026675920" duration="16828000" />
+      <workItem from="1539673521870" duration="3683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16828000" />
+    <option name="totallyTimeSpent" value="20511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,43 +399,43 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18648112" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32969603" />
-      <window_info anchor="bottom" id="Database Console" weight="0.19329695" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32969603" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" weight="0.32969603" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32969603" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32969603" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.26344505" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35515547" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969603" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="CDI" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Database" weight="0.29781312" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32969603" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.19329695" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32969603" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32969603" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32969603" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="CDI" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.29781312" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,20 +471,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a53c04e4-2f30-4bc3-97ea-727ac10290c3/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/sql/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1592">
-          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a53c04e4-2f30-4bc3-97ea-727ac10290c3/console.sql" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/sql/DriverManager.java" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -577,12 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-          <folding>
-            <element signature="method#executeChange#0;class#WriteController#0" />
-            <element signature="method#insert#0;class#WriteController#0" />
-            <element signature="method#edit#0;class#WriteController#0" />
-            <element signature="method#delete#0;class#WriteController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -597,12 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="891">
           <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#create#0;class#ProductController#0" />
-            <element signature="method#update#0;class#ProductController#0" />
-            <element signature="method#delete#0;class#ProductController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,12 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getCardHTMLTableHead#0;class#TableFactory#0" />
-            <element signature="method#createHTMLTableRow#0;class#TableFactory#0" />
-            <element signature="method#createHTMLOption#0;class#TableFactory#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -623,14 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
           <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="method#Database#0;class#Database#0" />
-            <element signature="method#Database#1;class#Database#0" />
-            <element signature="method#open#0;class#Database#0" />
-            <element signature="method#getResultSet#0;class#Database#0" />
-            <element signature="method#execute#0;class#Database#0" />
-            <element signature="method#close#0;class#Database#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,11 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-          <folding>
-            <element signature="method#doGet#0;class#Controller#0" />
-            <element signature="method#checkCmd#0;class#Controller#0" />
-            <element signature="method#getBackLastPage#0;class#Controller#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -665,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/updateProduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1699">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/searchProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -686,43 +555,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/dataClass/Category.java">
+    <entry file="file://$PROJECT_DIR$/src/database/dataClass/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="method#Category#2;class#Category#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/writeController/WriteProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="61" column="1" lean-forward="true" selection-start-line="8" selection-end-line="61" selection-end-column="1" />
+        <state relative-caret-position="612">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#preparedStatementInsert#0;class#WriteProductController#0" />
-            <element signature="method#preparedStatementEdit#0;class#WriteProductController#0" />
-            <element signature="method#preparedStatementDelete#0;class#WriteProductController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/readController/ReadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAllT#0;class#ReadController#0" />
+            <element signature="method#Product#0;class#Product#0" />
+            <element signature="method#Product#3;class#Product#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/readController/exampleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
+        <state relative-caret-position="323">
           <caret line="29" column="47" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -739,14 +586,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/dataClass/Product.java">
+    <entry file="file://$PROJECT_DIR$/web/updateProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        <state relative-caret-position="221">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/dataClass/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="method#Category#2;class#Category#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/writeController/WriteProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="61" column="1" selection-start-line="8" selection-end-line="61" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Product#0;class#Product#0" />
-            <element signature="method#Product#3;class#Product#0" />
+            <element signature="method#preparedStatementInsert#0;class#WriteProductController#0" />
+            <element signature="method#preparedStatementEdit#0;class#WriteProductController#0" />
+            <element signature="method#preparedStatementDelete#0;class#WriteProductController#0" />
           </folding>
         </state>
       </provider>
@@ -754,10 +619,55 @@
     <entry file="file://$PROJECT_DIR$/src/database/readController/ReadProductController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/readController/ReadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cookies/delete.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cookies/read.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cookies/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/cookies/hallo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sessions/session.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
         </state>
       </provider>
     </entry>

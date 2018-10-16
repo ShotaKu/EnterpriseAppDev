@@ -12,9 +12,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    //Fixme: Change me when you use!
     String id = request.getParameter("id");
 
+    //Fixme: Change value of name and controller name here when you use
     Product product = new Product();
     String brandOptions = "<option>Load error<option>";
     if(id != null){
@@ -41,9 +41,12 @@
 
 
 <h2>Update card!</h2>
+<%--Fixme: Change Controller name here!!--%>
 <form action="product-controller">
     <input type="hidden" name="cmd" value="u">
+    <%--Fixme: Change value name here!!--%>
     <input type="hidden" name="id" value="<%=product.getId()%>">
+    <%--Fixme: Change form here!!--%>
     <table>
         <tr>
             <td>Name:</td>
