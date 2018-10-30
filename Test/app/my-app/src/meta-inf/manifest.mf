@@ -1,0 +1,6 @@
+manifest-Version: 1.0
+Built-By: Chayapol
+Build-Jdk: 1.7
+Created-By: Apache Maven
+Main-Class: app.App
+Archiver-Version: Plexus Archiver
